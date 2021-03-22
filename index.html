@@ -26,11 +26,11 @@
                 width: 1100px;
             }
 
-            img.img1{
+            img.ledApagado{
                 display: block;
             }
 
-            img.img2{
+            img.ledAceso{
                 display: none;
             }
 
@@ -57,9 +57,9 @@
                 width: 22px;
                 height: 22px;
                 background-color: rgba(240,240,240,0);
-                top: 334.8px;
-                right: 292.7px;
-                position: absolute;
+                bottom: 152px;
+                left: 335px;
+                position: relative;
                 border-radius: 50%;
                 cursor: pointer;
             }
@@ -71,9 +71,9 @@
             div.USB{
                 width: 237px;
                 height: 66px;
-                top: 224px;
-                left: 95px;
-                position: absolute;
+                bottom: 286.5px;
+                right: 426px;
+                position: relative;
                 cursor: pointer;
                 background-color: rgba(240,240,240,0);
                 border-top-left-radius: 100%;
@@ -83,7 +83,7 @@
             div.USBIn{
                 display: none;
                 width: 220px;
-                left: 120px;
+                right: 370px;
             }
         </style>
     </head>
@@ -95,8 +95,8 @@
             <button class="apagaLed">Clique para apagar o LED!</button>
 
             <div>
-                <img class="img1" src="ledApagado.png"/>
-                <img class="img2" src="ledAceso.png" />
+                <img class="ledApagado" src="ledApagado.png"/>
+                <img class="ledAceso" src="ledAceso.png" />
             </div>
 
             <div class="Button fakeOnButton"></div>
@@ -111,8 +111,8 @@
             $(function () {
 
                 function ligaLed(){
-                    $(".img1").css('display', 'none');
-                    $(".img2").css('display', 'block');
+                    $(".ledApagado").css('display', 'none');
+                    $(".ledAceso").css('display', 'block');
                     $(".ligaLed").css('display', 'none');
                     $(".apagaLed").css('display', 'block');
                     $(".fakeOnButton").css('display','none');
@@ -122,8 +122,8 @@
                 }
 
                 function apagaLed(){
-                    $(".img1").css('display', 'block');
-                    $(".img2").css('display', 'none');
+                    $(".ledApagado").css('display', 'block');
+                    $(".ledAceso").css('display', 'none');
                     $(".ligaLed").css('display', 'block');
                     $(".apagaLed").css('display', 'none');
                     $(".fakeOnButton").css('display','block');
